@@ -1,0 +1,99 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Swiper main container */
+.swiper {
+    width: 100%;
+    height: 80vh;           /* size of slider */
+    background: #111;       /* dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    overflow: hidden;
+    /*height: 100vh; /* full viewport height full screen ma dekhase photos*/
+}
+
+/* Slide container */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.swiper-slide img {
+    width: 120%;              /* margin space left/right */
+    height: 100%;
+    border-radius: 0;  /* image around remove rounded corners */
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform .3s ease;
+}
+
+/* Hover zoom effect */
+.swiper-slide img:hover {
+    transform: scale(1.03);
+}
+
+/* Navigation arrows styling */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    font-weight: bold;
+}
+
+/* Pagination dots styling */
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00d4ff;  /* highlighted active dot */
+    opacity: 1;
+}
+
+/* Fruit section */
+.fruit-thoughts {
+    text-align: center;
+    background-color: #fff;  /* white to match slider gap */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.fruit-thoughts h2 {
+    color: #d32f2f;  /* matches pomegranate color */
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.fruit-thoughts p {
+    color: #555;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Fruit images in a row */
+.fruit-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fruit-gallery img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.fruit-gallery img:hover {
+    transform: scale(1.1);
+}
