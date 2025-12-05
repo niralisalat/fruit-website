@@ -5,69 +5,140 @@
     box-sizing: border-box;
 }
 
+/* Top Header */
+.top-header {
+    background: #d2b2b2;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.fruits-btn {
+    background: white;
+    color: #d32f2f;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fruits-btn:hover {
+    background: rgb(255, 230, 230);
+}
+
+/* Overlay Blur Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 900;
+}
+
+/* Right Panel Menu */
+.panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.4);
+    display: none;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
+.panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.fruit-list {
+    display: grid;
+    gap: 15px;
+}
+
+.fruit-item {
+    text-align: center;
+}
+
+.fruit-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.addCart {
+    background: #d32f2f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+.addCart:hover {
+    background: #a61010;
+}
+
+/* Close panel button */
+.close-btn {
+    background: #111;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
 /* Swiper main container */
 .swiper {
     width: 100%;
-    height: 80vh;           /* size of slider */
-    background: #111;       /* dark background */
+    height: 80vh;
+    background: #111;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px 0;
     overflow: hidden;
-    /*height: 100vh; /* full viewport height full screen ma dekhase photos*/
 }
 
-/* Slide container */
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Image styling */
+/* Slide image */
 .swiper-slide img {
-    width: 120%;              /* margin space left/right */
+    width: 120%;
     height: 100%;
-    border-radius: 0;  /* image around remove rounded corners */
     object-fit: cover;
+    border-radius: 0;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     transition: transform .3s ease;
 }
-
-/* Hover zoom effect */
 .swiper-slide img:hover {
     transform: scale(1.03);
-}
-
-/* Navigation arrows styling */
-.swiper-button-next,
-.swiper-button-prev {
-    color: white;
-    font-weight: bold;
-}
-
-/* Pagination dots styling */
-.swiper-pagination-bullet {
-    background: white;
-    opacity: 0.7;
-}
-
-.swiper-pagination-bullet-active {
-    background: #00d4ff;  /* highlighted active dot */
-    opacity: 1;
 }
 
 /* Fruit section */
 .fruit-thoughts {
     text-align: center;
-    background-color: #fff;  /* white to match slider gap */
+    background-color: #fff;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
 }
 
 .fruit-thoughts h2 {
-    color: #d32f2f;  /* matches pomegranate color */
+    color: #d32f2f;
     margin-bottom: 20px;
     font-size: 28px;
 }
@@ -75,25 +146,4 @@
 .fruit-thoughts p {
     color: #555;
     font-size: 16px;
-    margin: 10px 0;
-}
-
-/* Fruit images in a row */
-.fruit-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.fruit-gallery img {
-    width: 100px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.fruit-gallery img:hover {
-    transform: scale(1.1);
 }

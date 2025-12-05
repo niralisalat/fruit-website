@@ -12,8 +12,51 @@
 
 <body>
 
-    
+    <!-- 🔹 Top Header -->
+    <header class="top-header">
+        <h1>Fresh Fruit Store</h1>
+        <button id="openCart" class="fruits-btn">🍎 Fruits</button>
+    </header>
 
+    <!-- Overlay Background -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Right Side Fruit Menu Panel -->
+    <div id="fruitPanel" class="panel">
+
+        <h2>Available Fruits</h2>
+
+        <div class="fruit-list">
+            <div class="fruit-item">
+                <img src="banana.jpg" alt="">
+                <p>Banana</p>
+                <button class="addCart">Buy</button>
+            </div>
+
+            <div class="fruit-item">
+                <img src="blueberry.jpg" alt="">
+                <p>Blueberry</p>
+                <button class="addCart">Buy</button>
+            </div>
+
+            <div class="fruit-item">
+                <img src="strawberry.jpg" alt="">
+                <p>Strawberry</p>
+                <button class="addCart">Buy</button>
+            </div>
+
+            <div class="fruit-item">
+                <img src="kiwi.jpg" alt="">
+                <p>Kiwi</p>
+                <button class="addCart">Buy</button>
+            </div>
+        </div>
+
+        <button id="closePanel" class="close-btn">Close</button>
+    </div>
+
+    
+    <!-- Slider -->
     <div class="swiper mySwiper">
 
         <div class="swiper-wrapper">
@@ -27,23 +70,26 @@
 
         </div>
 
-        
-
-
         <!-- Controls must be inside -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
 
     </div>
-    <!-- Fruit thoughts section -->
-<section class="fruit-thoughts">
-    <h2>Healthy Fruits, Healthy Life!</h2>
-    <p>Experience the freshest fruits, delivered straight from the farm to your home. Our selection includes seasonal favorites, exotic varieties, and handpicked quality you can trust.</p>
-    
 
-    
-</section>
+    <!-- Fruit thoughts -->
+    <section class="fruit-thoughts">
+        <h2>Healthy Fruits, Healthy Life!</h2>
+        <p>Experience the freshest fruits, delivered straight from the farm to your home.</p>
+    </section>
+
+
+    <!-- Cart Message Toast -->
+    <div id="cartMsg"
+        style="position:fixed;bottom:20px;right:20px;background:#d32f2f;color:white;
+        padding:10px 20px;border-radius:6px;display:none;">
+        Added to cart
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
